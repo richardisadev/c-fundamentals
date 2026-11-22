@@ -19,7 +19,11 @@ int main(){
 
     printf("The third element of the second row of the array a is %d", a[1][2]);
     printf("The second element of the third row of the alphabets array is %c", alphabets[2][1]);
+
+    return 0; 
 }
+
+
 
 
 
