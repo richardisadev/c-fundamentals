@@ -32,9 +32,9 @@ int main(){
 
 }
 void printstudent(student student){
-    printf("%s\n", student.name);
-    printf("%d\n", student.age);
-    printf("%.2f\n", student.gpa);
-    printf("%s\n", (student.isFullTime) ? "Yes" : "No");
+    printf("Name: %s\n", student.name);
+    printf("Age: %d\n", student.age);
+    printf("GPA: %.2f\n", student.gpa);
+    printf("Full-Time: %s\n", (student.isFullTime) ? "Yes" : "No");
     printf("\n");
 }
