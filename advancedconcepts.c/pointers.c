@@ -11,15 +11,22 @@ int main(){
     int age = 20;
 
     birthday(&age);
-    printf("You are now %d years old", age);
+   
 }
-/*since variables are copied by value to functions meaning we cannot modify their value outside that function we can go around that by copying the variable by referencce to the function*/
+/*since variables are copied by value to functions meaning
+ we cannot modify their value outside that function 
+we can go around that by copying the variable by referencce to the function*/
 void birthday(int *age){
 
     int i;
+    int newage;
 
     for(i = 0; i < 7; i++){
-        (*age)+=10;
+         newage = (*age)+=10;
+        if( newage >= 60 && newage <= 100){
+            printf("You are now %d years old\n", newage);
+        }
+        
     }
     
 }
