@@ -2,7 +2,7 @@
 it allows us to pass the memory address of a large data structure without copying the entire data
 */
 
-#include<stdio.h>
+/*#include<stdio.h>
 
 void birthday(int *age);
 
@@ -12,11 +12,11 @@ int main(){
 
     birthday(&age);
    
-}
+}*/
 /*since variables are copied by value to functions meaning
  we cannot modify their value outside that function 
 we can go around that by copying the variable by referencce to the function*/
-void birthday(int *age){
+/*void birthday(int *age){
 
     int i;
     int newage;
@@ -29,4 +29,23 @@ void birthday(int *age){
         
     }
     
+}*/
+
+#include<stdio.h>
+
+int userage(int *age);
+
+int main(){
+
+    int age = 30;
+    
+    userage(&age);
+    
+    printf("you are now %d years old", age);
+
+}
+int userage(int *age){
+
+(*age)++;
+
 }
