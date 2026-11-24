@@ -5,10 +5,13 @@
 #include<stdio.h>
 
 int main(){
-    int n;
+    int n = 0;
     while(n > 10){
         n++;
-        printf("%d\n", n);
+        if(n % 2 == 1){
+            continue;
+        }
+        printf("The number %d is even\n", n);
     }
     return 0;
 }
