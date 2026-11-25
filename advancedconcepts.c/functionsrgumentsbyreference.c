@@ -4,7 +4,7 @@
 #include<string.h>
 
 typedef struct{
-    char name[8];
+    char name[50];
     int age;
     float gpa;
     bool isFullTime;
