@@ -1,22 +1,33 @@
 //pointers to structures in C
 #include<stdio.h>
 #include<stdbool.h>
+#include<string.h>
 
 typedef struct{
-    char name[7];
+    char name[8];
     int age;
     float gpa;
     bool isFullTime;
 }student;
 
+void printstudent(student student);
+
 int main(){
 
-    student s1 = {"Richard", 19, 4.2, true};
-    student *ptr = &s1;
+    student student1 = {0};
+    strcpy(student1.name, "Richard");
+    student1.age = 19;
+    student1.gpa = 4.2;
+    student1.isFullTime = true;
+   
 
-    printf("NAME: %s\n", ptr ->name);
-    printf("AGE: %d\n", ptr ->age);
-    printf("GPA: %.2f\n", ptr->gpa);
-    printf("FullTime: %s\n", (ptr-> isFullTime) ? "Yes" : "No");
+    printstudent( student1);
+
+}
+void printstudent(student student){
+    printf("NAME: %s\n", student.name);
+    printf("AGE: %d\n", student.age);
+    printf("GPA: %.2f\n", student.gpa);
+    printf("FullTime: %s\n", (student.isFullTime) ? "Yes" : "No");
 
 }
