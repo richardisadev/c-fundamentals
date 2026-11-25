@@ -53,6 +53,6 @@ int main(){
 
 }
 void move(point *p){
-    (*p).x++;
-    (*p).y++;
+    p->x++;
+    p->y++;
 }
