@@ -32,7 +32,7 @@ void printstudent( student *s){
 }*/
 //this is another programm that moves a point p in both x and y directions
 //I have used a pointer to the structure point 
-/*#include<stdio.h>
+#include<stdio.h>
 
 typedef struct{
     int x;
@@ -47,7 +47,7 @@ int main(){
 
     point *ptr = &point1;
 
-    move(&point1);
+    move(ptr);
 
     printf("%d\n", point1.x);
     printf("%d\n", point1.y);
@@ -56,8 +56,8 @@ int main(){
 void move(point *ptr){
     (*ptr).x++;
     (*ptr).y++;
-}*/
-#include<stdio.h>
+}
+/*#include<stdio.h>
 
 void printage(int *ptr);
 
@@ -81,4 +81,4 @@ void printage(int *ptr){
             printf("Richard is %d years old\n", newage);
         }
     }
-}
+}*/
