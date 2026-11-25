@@ -10,7 +10,7 @@ typedef struct{
     bool isFullTime;
 }student;
 
-void printstudent(student student);
+void printstudent(student *s);
 
 int main(){
 
@@ -19,15 +19,17 @@ int main(){
     student1.age = 19;
     student1.gpa = 4.2;
     student1.isFullTime = true;
+
+    student *ptr = &student1;
    
 
-    printstudent( student1);
+    printstudent( &student1);
 
 }
-void printstudent(student student){
-    printf("NAME: %s\n", student.name);
-    printf("AGE: %d\n", student.age);
-    printf("GPA: %.2f\n", student.gpa);
-    printf("FullTime: %s\n", (student.isFullTime) ? "Yes" : "No");
+void printstudent( student *s){
+    printf("NAME: %s\n", (*s).name);
+    printf("AGE: %d\n", (*s).age);
+    printf("GPA: %.2f\n", (*s).gpa);
+    printf("FullTime: %s\n", ((*s).isFullTime) ? "Yes" : "No");
 
 }
