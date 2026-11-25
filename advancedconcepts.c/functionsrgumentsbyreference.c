@@ -14,11 +14,8 @@ void printstudent(student *s);
 
 int main(){
 
-    student student1 = {0};
-    strcpy(student1.name, "Richard");
-    student1.age = 19;
-    student1.gpa = 4.2;
-    student1.isFullTime = true;
+    student student1 = {"Richard", 19, 4.2, true};
+    
 
     student *ptr = &student1;
    
