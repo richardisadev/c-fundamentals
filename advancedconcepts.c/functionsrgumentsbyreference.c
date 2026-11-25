@@ -1,5 +1,5 @@
 //pointers to structures in C
-/*#include<stdio.h>
+#include<stdio.h>
 #include<stdbool.h>
 #include<string.h>
 
@@ -29,8 +29,9 @@ void printstudent( student *s){
     printf("GPA: %.2f\n", (*s).gpa);
     printf("FullTime: %s\n", ((*s).isFullTime) ? "Yes" : "No");
 
-}*/
-
+}
+//this is another programm that moves a point p in both x and y directions
+//I have used a pointer to the structure point 
 #include<stdio.h>
 
 typedef struct{
