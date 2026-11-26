@@ -13,4 +13,10 @@ int main(){
 
     char *grades = (char *) malloc(number * sizeof(char));
 
+    if(grades == NULL){
+        printf("Memory Allocation failed");
+        return 1;
+    }
+    free(grades);
+    grades = NULL;
 }
