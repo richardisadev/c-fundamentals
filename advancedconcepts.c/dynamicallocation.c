@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdbool.h>
+#include<stdlib.h>
 
 
 //a programm that dynamically allocates memory based on user input
@@ -60,10 +61,14 @@ int main(){
         return 1;
     }
     for(int i = 0; i < number; i++){
-        printf(Enter )
+        printf("Enter grade #%d\n: ", i + 1);
+        scanf(" %c", &subjects[i]);
+    }
+    for(int i = 0; i < number; i++){
+        printf("%c\n", subjects[i]);
     }
 
-    free(subjects);
-    subjects = NULL;
+   free(subjects);
+   subjects = NULL;
 
 }
